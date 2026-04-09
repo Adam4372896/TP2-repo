@@ -1,0 +1,170 @@
+--progress is a global compose flag, better use `docker compose --progress xx build ...
+time="2026-04-09T23:24:28Z" level=warning msg="The \"VITE_API_URL\" variable is not set. Defaulting to a blank string."
+ Image adam92103/6255439-blogverse-backend:1.1 Building 
+ Image adam92103/6255439-blogverse-frontend:1.1 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.15kB done
+#1 DONE 0.0s
+
+#2 [backend internal] load build definition from Dockerfile
+#2 transferring dockerfile: 190B done
+#2 DONE 0.0s
+
+#3 [frontend internal] load build definition from Dockerfile
+#3 transferring dockerfile: 745B done
+#3 DONE 0.0s
+
+#4 [frontend internal] load metadata for docker.io/library/nginx:stable-alpine
+#4 DONE 0.0s
+
+#5 [frontend internal] load metadata for docker.io/library/node:20-alpine
+#5 DONE 0.0s
+
+#6 [backend internal] load .dockerignore
+#6 transferring context: 496B done
+#6 DONE 0.0s
+
+#7 [frontend internal] load .dockerignore
+#7 transferring context: 493B done
+#7 DONE 0.0s
+
+#8 [frontend 1/6] FROM docker.io/library/node:20-alpine
+#8 DONE 0.0s
+
+#9 [frontend 2/6] WORKDIR /app
+#9 CACHED
+
+#10 [backend internal] load build context
+#10 transferring context: 2.02kB done
+#10 DONE 0.0s
+
+#11 [frontend production 1/4] FROM docker.io/library/nginx:stable-alpine
+#11 CACHED
+
+#12 [frontend internal] load build context
+#12 transferring context: 2.58kB done
+#12 DONE 0.0s
+
+#13 [backend 3/6] COPY package*.json ./
+#13 DONE 0.0s
+
+#14 [frontend builder 3/6] COPY package*.json ./
+#14 DONE 0.1s
+
+#15 [frontend builder 4/6] RUN npm install
+#15 ...
+
+#16 [frontend production 2/4] RUN rm -rf /etc/nginx/conf.d/default.conf
+#16 DONE 0.4s
+
+#17 [frontend production 3/4] COPY nginx.conf /etc/nginx/conf.d/default.conf
+#17 DONE 0.0s
+
+#18 [backend 4/6] RUN npm install
+#18 4.941 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+#18 6.220 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+#18 7.900 npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+#18 7.935 npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+#18 8.334 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#18 8.478 npm warn deprecated glob@7.2.0: Glob versions prior to v9 are no longer supported
+#18 8.564 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#18 8.658 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#18 8.660 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#18 8.788 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#18 9.466 npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+#18 11.56 npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+#18 ...
+
+#15 [frontend builder 4/6] RUN npm install
+#15 4.082 npm warn deprecated react-tsparticles@2.12.2: @tsparticles/react is the new version, please use that
+#15 8.580 npm warn deprecated tsparticles-engine@2.12.0: starting from tsparticles v3 the packages are now moved to @tsparticles/package-name instead of tsparticles-package-name
+#15 12.48 
+#15 12.48 added 360 packages, and audited 361 packages in 12s
+#15 12.48 
+#15 12.48 83 packages are looking for funding
+#15 12.48   run `npm fund` for details
+#15 12.55 
+#15 12.55 19 vulnerabilities (2 low, 6 moderate, 9 high, 2 critical)
+#15 12.55 
+#15 12.55 To address all issues, run:
+#15 12.55   npm audit fix
+#15 12.55 
+#15 12.55 Run `npm audit` for details.
+#15 12.55 npm notice
+#15 12.55 npm notice New major version of npm available! 10.8.2 -> 11.12.1
+#15 12.55 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+#15 12.55 npm notice To update run: npm install -g npm@11.12.1
+#15 12.55 npm notice
+#15 DONE 13.2s
+
+#19 [frontend builder 5/6] COPY . .
+#19 DONE 0.1s
+
+#20 [frontend builder 6/6] RUN npm run build
+#20 0.381 
+#20 0.381 > client@0.0.0 build
+#20 0.381 > tsc -b && vite build
+#20 0.381 
+#20 ...
+
+#18 [backend 4/6] RUN npm install
+#18 18.80 
+#18 18.80 added 808 packages, and audited 809 packages in 18s
+#18 18.80 
+#18 18.80 147 packages are looking for funding
+#18 18.80   run `npm fund` for details
+#18 18.93 
+#18 18.93 37 vulnerabilities (6 low, 14 moderate, 16 high, 1 critical)
+#18 18.93 
+#18 18.93 To address issues that do not require attention, run:
+#18 18.93   npm audit fix
+#18 18.93 
+#18 18.93 To address all issues (including breaking changes), run:
+#18 18.93   npm audit fix --force
+#18 18.93 
+#18 18.93 Run `npm audit` for details.
+#18 18.94 npm notice
+#18 18.94 npm notice New major version of npm available! 10.8.2 -> 11.12.1
+#18 18.94 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+#18 18.94 npm notice To update run: npm install -g npm@11.12.1
+#18 18.94 npm notice
+#18 DONE 19.2s
+
+#21 [backend 5/6] COPY . .
+#21 DONE 0.0s
+
+#22 [backend 6/6] RUN npm run build --omit dev
+#22 ...
+
+#20 [frontend builder 6/6] RUN npm run build
+#20 5.790 src/actions/login.action.ts(22,36): error TS18046: 'error' is of type 'unknown'.
+#20 ERROR: process "/bin/sh -c npm run build" did not complete successfully: exit code: 2
+
+#22 [backend 6/6] RUN npm run build --omit dev
+#22 CANCELED
+------
+ > [frontend builder 6/6] RUN npm run build:
+0.381 
+0.381 > client@0.0.0 build
+0.381 > tsc -b && vite build
+0.381 
+5.790 src/actions/login.action.ts(22,36): error TS18046: 'error' is of type 'unknown'.
+------
+Dockerfile:14
+
+--------------------
+
+  12 |     
+
+  13 |     COPY . .
+
+  14 | >>> RUN npm run build
+
+  15 |     
+
+  16 |     # ─── Stage 2: Production (Nginx) ───
+
+--------------------
+
+target frontend: failed to solve: process "/bin/sh -c npm run build" did not complete successfully: exit code: 2
+
