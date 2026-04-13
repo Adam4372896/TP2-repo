@@ -1,7 +1,7 @@
 [submodule "6255439-blogverse-frontend"]
     path = 6255439-blogverse-frontend
-    url = <lien SSH du repo du frontend>
+    url = https://github.com/Adam4372896/6255439-blogverse-frontend.git
 
 [submodule "6255439-blogverse-backend"]
     path = 6255439-blogverse-backend
-    url = <lien SSH du repo du backend>
+    url = https://github.com/Adam4372896/6255439-blogverse-backend.git
